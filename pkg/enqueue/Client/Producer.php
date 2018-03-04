@@ -49,9 +49,9 @@ class Producer implements ProducerInterface
             $body = $message;
             $message = new Message();
             $message->setBody($body);
-        }
 
-        $this->prepareBody($message);
+            $this->prepareBody($message);
+        }
 
         $message->setProperty(Config::PARAMETER_TOPIC_NAME, $topic);
 
